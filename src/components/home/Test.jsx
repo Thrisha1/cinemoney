@@ -29,6 +29,7 @@ const Test = () => {
   return (
     <div className="flex flex-row overflow-x-auto w-full ">
   {images.map((image) => (
+    <div className="relative" >
       <Image
         className=" z-10 h-52 w-[32rem] m-3 rounded-xl opacity-70 bg-white"
         src={image.src}
@@ -36,7 +37,11 @@ const Test = () => {
         height={200}
         alt={image.alt}
       />
-      
+      <div className="absolute top-0 right-0 flex flex-col justify-center h-full">
+        <button className="mb-2">Yes</button>
+        <button>No</button>
+      </div>
+    </div>
   ))}
 </div>
 
