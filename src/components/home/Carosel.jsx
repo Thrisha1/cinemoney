@@ -1,46 +1,34 @@
 "use client";
 import React, { useState, useRef } from "react";
 import Image from 'next/image'
+import Link from 'next/link'
 
-const images = [
-  {
-    src: "https://edit.org/photos/img/blog/h1d-movie-poster-template-maker-creator-online-editor.jpg-840.jpg",
-    alt: "Image 1",
-  },
-  {
-    src: "https://static-cse.canva.com/blob/1053326/1131w-numKCOCv3a0.jpg",
-    alt: "Image 2",
-  },
-  {
-    src: "https://www.photowhoa.com/2015/wp-content/uploads/2021/03/Movie-poster-1-724x1024.jpg",
-    alt: "Image 3",
-  },
-  {
-    src: "https://templates.designwizard.com/c2c7e700-f416-11ea-99dd-b9647870a6ce.jpg",
-    alt: "Image 4",
-  },
-  {
-    src: "https://www.photowhoa.com/2015/wp-content/uploads/2021/03/Movie-poster-1-724x1024.jpg",
-    alt: "Image 5",
-  },
-];
 
-const Carosel = () => {
+const Carosel = ({src,text}) => {
+  return (
 
-    <div className="">
-        <h1>sxdcvgbhnbnvcvfdx</h1>
-        {
-            images.map((image)=>
-            (
-                <div className="w-full h-20">
-                    <Image className="h-full w-full object-cover"
-                        src={image.src}
-                        alt={image.alt} />
-                </div>
-            )
-        )}
+<div class="bg-none  border-gray-200 rounded-lg relative">
+    <Image
+        className=" z-10 h-60 w-[16rem] m-3 rounded-xl opacity-50 bg-white"
+        src={src}
+        width={200}
+        height={200}
+        alt=""
+      />
+    <div class="flex p-5  absolute bottom-1 right-7">
+        <Link href="" class=" m-3 inline-flex items-center px-5 py-2 text-sm font-medium text-center  bg-white rounded-full   focus:ring-blue-300 ">
+            Yes
+        </Link>
+        <Link href="" class=" m-3 inline-flex items-center px-5 py-2 text-sm font-medium text-center  bg-white rounded-full   focus:ring-blue-300 ">
+            No
+        </Link>
     </div>
+    <div className="absolute top-12 right-4 w-3/4 text-[#1C3169] text-sm font-bold">
+      <p>{text}</p>
+    </div>
+</div>
 
-}
+
+)}
 
 export default Carosel;
