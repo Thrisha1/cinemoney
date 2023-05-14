@@ -55,7 +55,7 @@ const Hero = () => {
       ))}
       </div> */}
       <CardGallery questions={questions} />
-      <div className="flex flex-col items-center justify-center h-64 mt-10 overflow-y-scroll">
+      <div className="flex flex-col items-center justify-center h-64 mt-10 overflow-y-scroll mb-24">
         {questions.map((question, index) => (
           <div key={index} className="flex text-center p-5 bg-white my-3 mx-5 h-32 justify-center rounded-xl text-[#1C3169] text-sm font-bold">
             <p>{question.ques}</p>
