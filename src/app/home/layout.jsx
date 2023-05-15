@@ -2,14 +2,14 @@ import React from 'react'
 import Navbar from '../../components/Navbar.jsx'
 import Footer from '../../components/Footer.jsx'
 
-const layout = ({children}) => {
+const layout = ({ children }) => {
   return (
     <html lang="en">
-      <body className="bg-[#F2F6FE]">
-        <Navbar/>
+      <body className="bg-[#E5EEFF]">
+        <Navbar />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   )
 }

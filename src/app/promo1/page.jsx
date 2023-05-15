@@ -6,7 +6,7 @@ import TextPromo from '../../../public/landingAssests/textpromo.png'
 
 const page = () => {
   return (
-    <div>
+    <div className='bg-[#E5EEFF]'>
          <Image src={LandImage} width={500} className="h-150 " />
          <Image src={TextPromo} width={170} className="h-50 my-5 mb-20" />
          <Link href="/promo2" className="w-3/4 text-center ml-16 bg-blue-500 px-16 py-5 self-center rounded-xl text-lg text-white"> Let's Go</Link>
