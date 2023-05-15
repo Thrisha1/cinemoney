@@ -6,7 +6,7 @@ const CardGallery = ({ questions }) => {
       {
         questions.map((question) => (
 
-          <div className="w-[14rem] h-80 rounded-lg overflow-hidden shadow-lg relative">
+          <div className="w-[14rem] h-72 rounded-lg overflow-hidden shadow-lg relative">
             <img
               src={question.src}
               alt="Image 1"

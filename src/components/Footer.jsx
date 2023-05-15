@@ -12,27 +12,31 @@ const Footer = () => {
   const [isEnlarged3, setIsEnlarged3] = useState(false);
 
   const handleEnlarge1 = () => {
+    
     setIsEnlarged1(!isEnlarged1);
+    setTimeout(() => setIsEnlarged1(false), 500);
   };
   const handleEnlarge2 = () => {
     setIsEnlarged2(!isEnlarged2);
+    setTimeout(() => setIsEnlarged2(false), 500);
   };
   const handleEnlarge3 = () => {
     setIsEnlarged3(!isEnlarged3);
+    setTimeout(() => setIsEnlarged3(false), 500);
   };
   return (
     <div className="flex bg-white justify-around fixed bottom-0 w-full py-3">
          <Link href="/home">
           <div
-            className={`h-10 w-10 p-2 rounded-xl cursor-pointer ${
-              isEnlarged1 ? 'bg-blue-400 h-12 w-12 absolute bottom-7' : 'bg-white opacity-50'
+            className={`h-10 w-10 p-2 rounded-full cursor-pointer ${
+              isEnlarged1 ? 'bg-[#67ABD2] h-12 w-12 absolute bottom-7' : 'bg-white opacity-50'
             }`}
             onClick={handleEnlarge1}
           >
             <Image src={Home} width={50} height={50} alt="" />
           </div>
         </Link>
-         <Link href="/wallet">
+         <Link href="/home/wallet">
           <div
             className={`h-10 w-10 p-2 rounded-xl cursor-pointer ${
               isEnlarged2 ? 'bg-blue-400 h-12 w-12 absolute bottom-7' : 'bg-white opacity-50'
