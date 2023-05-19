@@ -12,7 +12,7 @@ import Terms from "../../public/Drawer_icons/terms.svg"
 import Logout from "../../public/Drawer_icons/logout.svg"
 import Link from 'next/link';
 
-const Navbar = () => {
+const Navbar = ({src,text}) => {
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -30,8 +30,9 @@ const Navbar = () => {
             <rect y="60" width="75" height="7" fill="#585CE5"></rect>
           </svg>
         </div>
-        <div className="w-full flex items-center justify-center">
-          <Image src={logo} width={150} className="w-54 h-15 py-4 mr-9 " />
+        <div className="w-full flex items-center justify-center relative">
+          <Image src={src} width={150} className="w-54 h-15 py-4 mr-9 " />
+          <h1 className="text-black text-lg font-medium font-body absolute mr-8  text-center">{text}</h1>
         </div>
       </div>
 
@@ -53,24 +54,6 @@ const Navbar = () => {
               },
             }}
           >
-
-            {/* additional close btn */}
-            {/* <svg
-              onClick={onClose}
-              className="text-black w-6 h-6 mb-6"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg> */}
             <div className="flex flex-col gap-8">
               <Link href="/home/profile" className="flex items-center  gap-4">
                 <Image className='h-10 w-10 bg-[#E8E9FF] rounded-lg p-2' src={Profile_icon} alt="profile pic" />
