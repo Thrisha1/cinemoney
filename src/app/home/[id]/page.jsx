@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { Drawer } from "antd";
 import React, { useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import InputRange from "react-input-range";
 import "react-input-range/lib/css/index.css";
 import ProcessingLoader from "../../../components/home/ProcessingLoader.jsx";
 
