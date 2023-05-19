@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const CardGallery = ({ questions }) => {
   return (
@@ -6,7 +7,7 @@ const CardGallery = ({ questions }) => {
       {
         questions.map((question) => (
 
-          <div className="w-[14rem] h-72 rounded-lg overflow-hidden shadow-lg relative">
+          <Link href={`/home/${question.id}`} className="w-[14rem] h-72 rounded-lg overflow-hidden shadow-lg relative">
             <img
               src={question.src}
               alt="Image 1"
@@ -23,7 +24,7 @@ const CardGallery = ({ questions }) => {
                 </button>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
     </div>
   );
